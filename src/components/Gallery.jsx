@@ -25,7 +25,7 @@ export default function Gallery() {
   return (
     <section className="p-8 bg-white">
       <div className="text-center mb-6">
-        <div className="inline-block w-40 h-20 bg-blue-600 text-white px-4 py-1 rounded-md text-sm font-semibold">
+        <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-md text-sm font-semibold">
           Gallery
         </div>
         <h2 className="text-2xl font-bold mt-2">“Foundation Today, Landmark Tomorrow”</h2>
