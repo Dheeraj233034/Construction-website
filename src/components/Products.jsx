@@ -1,31 +1,37 @@
-
 import { useEffect, useRef } from "react";
+
+// Import images at the top
+import PR1 from "../assets/images/PR1.png";
+import PR2 from "../assets/images/PR2.png";
+import PR3 from "../assets/images/PR3.png";
+import PR6 from "../assets/images/PR6.png";
+import PR4 from "../assets/images/PR4.png";
 
 const projects = [
   {
     title: "Power Control Center Panel (PCC)",
     description: "We offer PCC panel with a current carrying capacity up to 6300A. We have short circuit type test certificate of 50kA/1 Sec from CPRI.",
-    image: "/src/assets/images/PR1.png",
+    image: PR1,
   },
   {
     title: "Motor Control Center Panel (MCC)",
     description: "Switchboard assemblies used for low voltage power distribution having a common power bus and principally containing motor control units are generally called motor control center (MCC).",
-    image: "/src/assets/images/PR2.png",
+    image: PR2,
   },
   {
     title: "PLC AND SCADA PANELS",
     description: "Programming logic controller (PLC) desire to be logic flow for the program using the input device to trigger output devices depending on logic of the program, these panels are mainly used having configuration.",
-    image: "/src/assets/images/PR3.png",
+    image: PR3,
   },
   {
     title: "L T Panel",
     description: "To control and monitor the main supply at centralized location with protective switchgears. Similarly of distribution boards are utilized for control of small power control provided near load.",
-    image: "/src/assets/images/PR6.png",
+    image: PR6,
   },
   {
     title: "Feeder Pillar",
     description: "Feeder pillars allow simple and local maintenance to your equipment, reducing site downtime and reducing overall maintenance costs.",
-    image: "/src/assets/images/PR4.png",
+    image: PR4,
   },
 ];
 
@@ -86,3 +92,4 @@ export default function ProjectCarousel() {
     </div>
   );
 }
+
