@@ -1,3 +1,4 @@
+import Vision from "../assets/images/V2.jpg";
 export default function OurVision() {
     return (
       <section className="flex flex-col md:flex-row items-center  p-8 bg-white rounded-lg shadow-md">
@@ -28,7 +29,7 @@ export default function OurVision() {
   
         <div className="w-full lg:w-1/3 flex justify-center">
           <img
-            src="src\assets\images\V2.PNG"
+            src={Vision}
             alt="Futuristic city skyline"
             className="rounded-3xl w-3/4 h-[450px] object-cover"
           />
