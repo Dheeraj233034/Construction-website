@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+// Import images
+import T4 from "../assets/images/T4.png";
+
 export default function TeamMembers() {
   const scrollRef = useRef(null);
 
@@ -8,56 +11,28 @@ export default function TeamMembers() {
     {
       name: "Ajay Kumar",
       role: "House Owner",
-      image: "/src/assets/images/T4.png",
-      description:
-        "The construction company did an excellent job on my home renovation, delivering quality work on time and within budget."
-    },
-    {
-      name: "Ajay Kumar",
-      role: "House Owner",
-      image: "/src/assets/images/T4.png",
-      description:
-        "The construction company did an excellent job on my home renovation, delivering quality work on time and within budget."
-    },
-    {
-      name: "Ajay Kumar",
-      role: "House Owner",
-      image: "/src/assets/images/T4.png",
-      description:
-        "The construction company did an excellent job on my home renovation, delivering quality work on time and within budget."
-    },
-    {
-      name: "Ajay Kumar",
-      role: "House Owner",
-      image: "/src/assets/images/T4.png",
-      description:
-        "The construction company did an excellent job on my home renovation, delivering quality work on time and within budget."
-    },
-    {
-      name: "Ajay Kumar",
-      role: "House Owner",
-      image: "/src/assets/images/T4.png",
+      image: T4,
       description:
         "The construction company did an excellent job on my home renovation, delivering quality work on time and within budget."
     },
     {
       name: "William Joe",
       role: "Suppliers",
-      image: "/src/assets/images/T4.png",
+      image: T4,
       description:
         "Working with this construction company has been a great experience; they are reliable, pay on time, and communicate."
     },
     {
       name: "Sunitha Patel",
       role: "Real Estate Agent",
-      image: "/src/assets/images/T4.png",
+      image: T4,
       description:
         "This construction company consistently delivers high-quality work and meets deadlines, making it easy to recommend."
     },
     {
       name: "Michael Lee",
       role: "Project Manager",
-      image: "/src/assets/images/T4.png",
+      image: T4,
       description:
         "Managing construction projects has never been easier. This team ensures timely and efficient work."
     }
@@ -85,7 +60,11 @@ export default function TeamMembers() {
         </button>
 
         {/* Team Members Scrollable Container */}
-        <div ref={scrollRef} className="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide px-10 py-5 w-full">
+        <div
+          ref={scrollRef}
+          className="flex space-x-6 overflow-x-auto scroll-smooth px-10 py-5 w-full"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {team.map((member, index) => (
             <div key={index} className="flex-none w-80 bg-white rounded-lg shadow-md p-6 text-center border">
               <img src={member.image} alt={member.name} className="w-full h-60 object-contain rounded-lg mb-4" />
@@ -104,6 +83,15 @@ export default function TeamMembers() {
           <ChevronRight size={24} />
         </button>
       </div>
+
+      {/* Hide Scrollbar for WebKit Browsers (Chrome, Safari) */}
+      <style>
+        {`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
     </section>
   );
 }
