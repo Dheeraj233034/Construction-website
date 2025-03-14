@@ -1,32 +1,37 @@
-
-
 import { useEffect, useRef } from "react";
+
+// Import images at the top
+import h2 from "../assets/images/h2.png";
+import p1 from "../assets/images/p1.png";
+import s4 from "../assets/images/s4.png";
+import s3 from "../assets/images/s3.png";
+import s5 from "../assets/images/s5.png";
 
 const projects = [
   {
     title: "Railway Over Head Traction System, Traction Sub-Station and EHT Transmission Line",
-    description: " CORE4 – EPC division is capable to undertake Total Turnkey Projects, pertaining to Design, Supply, Erection, Testing and Commissioning of all 2 X 25KV Over Head Electrification (OHE) for Indian Railway",
-    image: "/src/assets/images/h2.png",
+    description: "CORE4 – EPC division is capable to undertake Total Turnkey Projects...",
+    image: h2, // Use imported variable
   },
   {
     title: "Railway Station Infrastructure Works",
-    description: "CORE4 – Undertake infrastructure projects for Railway Stations, involving Composite nature of works involving Civil, Electricaland Fabrication works. We provide solutions such as Foot Over Bridge (FOB), Station.",
-    image: "/src/assets/images/p1.png",
+    description: "CORE4 – Undertake infrastructure projects for Railway Stations...",
+    image: p1,
   },
   {
     title: "SCDA and Automation systems",
-    description: "We have an experienced team to Design , Supply, Erection and Commissioning of SCADA and Automation systems for Railway Traction System, Traction Sub-Station, Transmission Lines, MV distribution system involving RMUs, LT Distribution system within Railway Stations,",
-    image: "/src/assets/images/s4.png",
+    description: "We have an experienced team to Design , Supply, Erection...",
+    image: s4,
   },
   {
     title: "Water and Waste Water Treatment Plants",
-    description: "Managing Water and Wast Water is a tedious job. Growing population leads to increase in water usage, intern generation of waste water in Railway Station premises. We have our technology such as MBBR, MBR, SBR for waste water treatment plant with Zero Liquid discharge technology",
-    image: "/src/assets/images/s3.png",
+    description: "Managing Water and Waste Water is a tedious job...",
+    image: s3,
   },
   {
     title: "Private Public Partnership model",
-    description: "Future Plans - Private Public Partnership (PPP) model in Infrastructure works, Pre-Cast Concrete Products, Distribution Transformer Manufacturing Unit, Cloud Data Centre service provider.",
-    image: "/src/assets/images/s5.png",
+    description: "Future Plans - Private Public Partnership (PPP) model...",
+    image: s5,
   },
 ];
 
