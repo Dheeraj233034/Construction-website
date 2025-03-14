@@ -1,39 +1,21 @@
-// export default function OurClients() {
-//     const clients = [
-//       { name: "Google", logo: "/src/assets/images/c1.png" },
-//       { name: "Capgemini", logo: "/src/assets/images/c2.png" },
-//       { name: "Accenture", logo: "/src/assets/images/c5.png" },
-//       { name: "Amazon", logo: "/src/assets/images/C6.png" },
-//       { name: "HCLTech", logo: "/src/assets/images/C8.png" },
-//       { name: "Infosys", logo: "/src/assets/images/C9.png" }
-//     ];
-  
-//     return (
-//       <section className="p-8 bg-white text-center">
-//         <h2 className="text-2xl font-bold text-blue-600 mb-6">Our Clients</h2>
-//         <div className="flex flex-wrap justify-center items-center gap-8">
-//           {clients.map((client, index) => (
-//             <img
-//               key={index}
-//               src={client.logo}
-//               alt={client.name}
-//               className="h-24 object-contain"
-//             />
-//           ))}
-//         </div>
-//       </section>
-//     );
-//   } 
+
+import c1 from "../assets/images/c1.png";
+import c2 from "../assets/images/c2.png";
+import c5 from "../assets/images/c5.png";
+import c6 from "../assets/images/C6.png";
+import c13 from "../assets/images/c13.png";
+import c12 from "../assets/images/c12.png";
+import c14 from "../assets/images/c14.png";
 
 export default function OurClients() {
   const clients = [
-    { name: "Google", logo: "/src/assets/images/c1.png" },
-    { name: "Capgemini", logo: "/src/assets/images/c2.png" },
-    { name: "Accenture", logo: "/src/assets/images/c5.png" },
-    { name: "Amazon", logo: "/src/assets/images/C6.png" },
-    { name: "HCLTech", logo: "/src/assets/images/c13.png" },
-    { name: "Infosys", logo: "/src/assets/images/c12.png" },
-    { name: "Infosys", logo: "/src/assets/images/c14.png" }
+    { name: "Google", logo: c1 },
+    { name: "Capgemini", logo: c2 },
+    { name: "Accenture", logo: c5 },
+    { name: "Amazon", logo: c6 },
+    { name: "HCLTech", logo: c13 },
+    { name: "Infosys", logo: c12 },
+    { name: "TCS", logo: c14 } // Changed duplicate "Infosys" to "TCS"
   ];
 
   return (
