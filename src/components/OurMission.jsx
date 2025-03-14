@@ -1,9 +1,10 @@
+import Mission from "../assets/images/M1.png"
 export default function OurMission() {
     return (
       <section className="flex flex-col md:flex-row items-center justify-between px-2 py-12 bg-white">
         <div className="w-full lg:w-1/3 flex justify-center">
           <img
-            src="src\assets\images\M1.png"
+            src={Mission}
             alt="Construction site with workers and cranes"
             className="w-3/4 h-[450px] object-cover rounded-3xl "
           />
