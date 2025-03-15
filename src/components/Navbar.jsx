@@ -1,58 +1,6 @@
-
-
-// import React, { useState } from "react";
-// import { FaBars, FaTimes } from "react-icons/fa";
-
-// const Navbar = () => {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   return (
-//     <nav className="bg-white shadow-md h-24 px-6 md:px-12 flex justify-between items-center">
-//       {/* Logo */}
-//       <div className="flex items-center">
-//         <img src="src/assets/images/logo.png" alt="Logo" className="h-20" />
-//       </div>
-
-//       {/* Desktop Menu */}
-//       <ul className="hidden md:flex space-x-8 text-black text-lg font-normal">
-//         {["Home", "About Us", "Management Team", "Gallery", "Projects", "Investors", "Contact Us"].map((item) => (
-//           <li key={item}>
-//             <a href="#" className="hover:text-blue-700 transition">{item}</a>
-//           </li>
-//         ))}
-//       </ul>
-
-//       {/* Mobile Menu Button */}
-//       <button
-//         className="md:hidden text-2xl"
-//         onClick={() => setMenuOpen(!menuOpen)}
-//         aria-label="Toggle Menu"
-//       >
-//         {menuOpen ? <FaTimes /> : <FaBars />}
-//       </button>
-
-//       {/* Mobile Menu */}
-//       {menuOpen && (
-//         <div className="absolute top-20 left-0 w-full bg-white shadow-lg p-6 md:hidden">
-//           <ul className="flex flex-col space-y-4 text-black text-lg font-normal">
-//             {["Home", "About Us", "Management Team", "Gallery", "Projects", "Investors", "Contact Us"].map((item) => (
-//               <li key={item}>
-//                 <a href="#" className="hover:text-blue-700 transition" onClick={() => setMenuOpen(false)}>
-//                   {item}
-//                 </a>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png"; // Ensure the correct path to your image
 
 const Navbar = () => {
@@ -88,11 +36,19 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 lg:space-x-8 text-black text-base lg:text-lg font-normal">
-        {["Home", "About Us", "Management Team", "Gallery", "Projects", "Investors", "Contact Us"].map((item) => (
-          <li key={item}>
-            <a href="#" className="hover:text-blue-700 transition">
-              {item}
-            </a>
+        {[
+          { name: "Home", path: "/" },
+          { name: "About Us", path: "/about" },
+          { name: "Management Team", path: "/management" },
+          { name: "Gallery", path: "/gallery" },
+          { name: "Projects", path: "/projects" },
+          { name: "Investors", path: "/investors" },
+          { name: "Contact Us", path: "/contact" },
+        ].map((item) => (
+          <li key={item.name}>
+            <Link to={item.path} className="hover:text-blue-700 transition">
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>
@@ -124,11 +80,19 @@ const Navbar = () => {
         </button>
 
         <ul className="flex flex-col items-center justify-center h-full space-y-6 text-black text-lg font-normal">
-          {["Home", "About Us", "Management Team", "Gallery", "Projects", "Investors", "Contact Us"].map((item) => (
-            <li key={item}>
-              <a href="#" className="hover:text-blue-700 transition" onClick={() => setMenuOpen(false)}>
-                {item}
-              </a>
+          {[
+            { name: "Home", path: "/" },
+            { name: "About Us", path: "/about" },
+            { name: "Management Team", path: "/management" },
+            { name: "Gallery", path: "/gallery" },
+            { name: "Projects", path: "/projects" },
+            { name: "Investors", path: "/investors" },
+            { name: "Contact Us", path: "/contact" },
+          ].map((item) => (
+            <li key={item.name}>
+              <Link to={item.path} className="hover:text-blue-700 transition" onClick={() => setMenuOpen(false)}>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
@@ -138,3 +102,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
